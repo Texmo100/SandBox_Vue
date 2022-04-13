@@ -21,7 +21,7 @@ export default {
 .counter {
   justify-content: center;
   align-items: center;
-  font-size: 4rem;
+  font-size: 5rem;
   border-right: 1px solid #e8e8e8;
 }
 

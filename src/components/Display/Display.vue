@@ -44,8 +44,8 @@ export default {
 
 <style scoped>
 .display {
-  width: 50%;
-  height: 50%;
+  width: 70%;
+  height: 70%;
   background-color: #212121;
   border-radius: 1rem;
   display: flex;
@@ -53,6 +53,8 @@ export default {
 
 @media screen and (max-width: 768px) {
   .display {
+    width: 90%;
+    height: 80%;
     flex-direction: column;
   }
 }
