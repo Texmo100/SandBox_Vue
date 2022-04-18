@@ -9,14 +9,14 @@
 import Counter from "../Counter/Counter.vue";
 import Actions from "../Actions/Actions.vue";
 
-const counterHandler = (counter, limit, action) => {
-  if (action === "increment") {
-    const counterIncremented = counter + 1;
-    return counter >= limit ? counter : counterIncremented;
-  } else if (action === "decrement") {
-    const counterDecremented = counter - 1;
-    return counter <= limit ? counter : counterDecremented;
-  }
+const counterIncrementHandler = (counter, limit) => {
+  const counterIncremented = counter + 1;
+  return counter >= limit ? counter : counterIncremented;
+};
+
+const counterDecrementHandler = (counter, limit) => {
+  const counterDecremented = counter - 1;
+  return counter <= limit ? counter : counterDecremented;
 };
 
 export default {
@@ -33,10 +33,10 @@ export default {
   },
   methods: {
     increment() {
-      this.count = counterHandler(this.count, 10, "increment");
+      this.count = counterIncrementHandler(this.count, 10);
     },
     decrement() {
-      this.count = counterHandler(this.count, 0, "decrement");
+      this.count = counterDecrementHandler(this.count, 0);
     },
   },
 };
