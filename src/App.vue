@@ -1,12 +1,31 @@
 <template>
   <div class="wrapper">
-    <p>Hey this is the SandBox Vue</p>
+    <button type="button" class="btn" @click="showModal">Open Modal</button>
+    <Modal v-show="isModalVisible" @close="closeModal" />
   </div>
 </template>
 
 <script>
+import Modal from "./components/Modal/Modal.vue";
+
 export default {
   name: "App",
+  components: {
+    Modal,
+  },
+  data() {
+    return {
+      isModalVisible: false,
+    };
+  },
+  methods: {
+    showModal() {
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+    },
+  },
 };
 </script>
 
@@ -39,11 +58,25 @@ p {
 <style scoped>
 .wrapper {
   height: 100vh;
-  background-color: #2b2b2b;
-  color: #e8e8e8;
+  background-color: #e8e8e8;
+  color: #2b2b2b;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
+}
+
+.btn {
+  border: none;
+  width: 10rem;
+  height: 4rem;
+  background-color: gray;
+  color: aquamarine;
+  border-radius: 1rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #1f1f1f;
 }
 </style>
