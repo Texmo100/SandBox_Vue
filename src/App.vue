@@ -1,12 +1,20 @@
 <template>
   <div class="wrapper">
-    <p>Hey this is the SandBox Vue</p>
+    <Title title="Image Gallery"/>
+    <Gallery />
   </div>
 </template>
 
 <script>
+import Gallery from './components/Gallery/Gallery.vue';
+import Title from './components/Title/Title.vue';
+
 export default {
   name: "App",
+  components: {
+    Gallery,
+    Title,
+  },
 };
 </script>
 
@@ -31,19 +39,19 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-p {
+p, h1 {
   margin: 0;
 }
 </style>
 
 <style scoped>
 .wrapper {
-  height: 100vh;
-  background-color: #2b2b2b;
-  color: #e8e8e8;
+  min-height: 100vh;
+  max-height: 100%;
+  background-color: #e5e5e5;
+  color: #2b2b2b;
   display: flex;
   justify-content: center;
-  align-items: center;
   padding: 2rem;
 }
 </style>
