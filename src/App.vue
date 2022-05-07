@@ -1,12 +1,17 @@
 <template>
   <div class="wrapper">
-    <p>Hey this is the SandBox Vue</p>
+    <Display />
   </div>
 </template>
 
 <script>
+import Display from './components/UI/Display/Display.vue';
+
 export default {
   name: "App",
+  components: {
+    Display,
+  }
 };
 </script>
 
@@ -39,7 +44,8 @@ p {
 <style scoped>
 .wrapper {
   height: 100vh;
-  background-color: #2b2b2b;
+  background: rgb(2,0,36);
+  background: linear-gradient(24deg, rgba(2,0,36,1) 0%, rgba(36,129,93,1) 52%, rgba(0,212,255,1) 100%);
   color: #e8e8e8;
   display: flex;
   justify-content: center;
